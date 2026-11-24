@@ -1,1 +1,365 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>StrataForge | Product Strategy Studio</title><link rel="icon" href="assets/mark.svg"><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="#top"><img src="assets/mark.svg" alt=""><span>STRATAFORGE<small>PRODUCT STRATEGY STUDIO</small></span></a><nav><a href="#landscape">Landscape</a><a href="#model">Strategy</a><a href="#scope">Scope</a><a href="#delivery">Delivery</a></nav><a href="https://blairyfairy.github.io/BlairPage/">Portfolio ↗</a></header><main id="top"><section class="hero"><div><p class="eyebrow">BLAIR PAGE / PRODUCT INTELLIGENCE</p><h1>Find your edge.<br><em>Build with intent.</em></h1><p>Explore competitive trade-offs and turn product strategy into a focused release plan.</p><span class="tag">Interactive strategy sandbox</span></div><svg viewBox="0 0 500 330" role="img" aria-label="Layered product strategy landscape"><defs><linearGradient id="hero" x2="1" y2="1"><stop stop-color="#d9f99d"/><stop offset="1" stop-color="#34d399"/></linearGradient><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#34574b"/></pattern></defs><rect width="500" height="330" rx="24" fill="url(#grid)"/><g stroke="url(#hero)" stroke-width="2" fill="#163b30"><path d="M60 205 250 110 440 205 250 300Z"/><path d="M60 160 250 65 440 160 250 255Z"/><path d="M60 115 250 20 440 115 250 210Z"/><path d="M250 20V210M155 67 345 162M345 67 155 162"/></g><g fill="#d9f99d"><circle cx="250" cy="115" r="7"/><circle cx="155" cy="67" r="5"/><circle cx="345" cy="162" r="5"/></g><g fill="#eef5e9" font-size="12" font-family="sans-serif"><text x="365" y="75">POSITION</text><text x="365" y="225">SCOPE</text><text x="70" y="280">DELIVERY</text></g></svg></section><div class="metrics"><article><small>SCENARIO</small><strong>Energy operations</strong></article><article><small>STRATEGIC OPTIONS</small><strong>3</strong></article><article><small>FEATURE BACKLOG</small><strong>8</strong></article></div><section id="landscape"><p class="eyebrow">01 / MARKET LANDSCAPE</p><h2>Competitive intelligence</h2><p>Scenario: a small commercial building operator wants to reduce avoidable electricity use. Compare alternative solution archetypes, not named vendor claims.</p><div class="cards"><article><h3>Utility portal</h3><p>Historical consumption and billing visibility. Investigate interval data availability and export access.</p></article><article><h3>Building automation</h3><p>Equipment monitoring and control. Investigate integration costs and operational permissions.</p></article><article><h3>Energy advisory</h3><p>Expert interpretation and improvement planning. Investigate turnaround and recurring service costs.</p></article></div><p class="muted">Research starting points: <a href="https://www.energystar.gov/buildings">ENERGY STAR Buildings</a> · <a href="https://www.energy.gov/eere/buildings/building-technologies-office">DOE Building Technologies Office</a>. These are background resources, not validation of the scenario.</p></section><section id="model"><p class="eyebrow">02 / STRATEGY SIMULATOR</p><h2>Explore positioning trade-offs</h2><p>Adjust priorities to see how illustrative option ratings respond. No market ranking is asserted.</p><div class="split"><article id="weights"></article><article id="rank" aria-live="polite"></article></div><button id="reset">Reset priorities</button></section><section id="scope"><p class="eyebrow">03 / RELEASE PLANNER</p><h2>Design a constrained release</h2><p>Select capabilities within an illustrative engineering capacity. Dependencies and safety gates remain visible.</p><label>Capacity (effort points) <input id="capacity" type="range" min="5" max="30" value="15"> <output id="cap">15</output></label><div class="meter"><div id="usage"></div></div><p id="status" aria-live="polite"></p><div id="features" class="cards"></div><button id="export">Export selected scope CSV</button></section><section id="delivery"><p class="eyebrow">04 / DELIVERY & GOVERNANCE</p><h2>From hypothesis to learning</h2><div class="cards"><article><h3>Discover</h3><p>Observe facilities staff reviewing utility bills. Test access to interval data.</p></article><article><h3>Prototype</h3><p>Replay historical data and compare alerts with a simple baseline.</p></article><article><h3>Evaluate</h3><p>Measure false alerts, investigation time and operator comprehension before expansion.</p></article></div><svg viewBox="0 0 900 160" role="img" aria-label="Read-only energy data flows through analysis and human review" class="diagram"><g fill="#173b30" stroke="#76b89b"><rect x="10" y="40" width="190" height="80" rx="14"/><rect x="240" y="40" width="190" height="80" rx="14"/><rect x="470" y="40" width="190" height="80" rx="14"/><rect x="700" y="40" width="190" height="80" rx="14"/></g><g stroke="#d9f99d" stroke-width="3" fill="none"><path d="M200 80h40l-9-6m9 6-9 6M430 80h40l-9-6m9 6-9 6M660 80h40l-9-6m9 6-9 6"/></g><g fill="#eef5e9" text-anchor="middle" font-size="17"><text x="105" y="85">Meter data</text><text x="335" y="85">Analysis</text><text x="565" y="85">Human review</text><text x="795" y="85">Action log</text></g></svg><p>Proposed safeguards: read-only access, role-based permissions, traceable recommendations and no autonomous equipment control. Actual integration and savings require testing.</p></section></main><footer>STRATAFORGE / BLAIR PAGE · Illustrative product strategy sandbox · <a href="https://blairyfairy.github.io/BlairPage/">Return to portfolio</a></footer><script src="app.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>StrataForge | Product Strategy Studio</title><link rel="icon" href="assets/mark.svg"><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="#top"><img src="assets/mark.svg" alt=""><span>STRATAFORGE<small>PRODUCT STRATEGY STUDIO</small></span></a><nav><a href="#landscape">Landscape</a><a href="#model">Strategy</a><a href="#scope">Scope</a><a href="#delivery">Delivery</a></nav><a href="https://blairyfairy.github.io/BlairPage/">Portfolio ↗</a></header><main id="top"><section class="hero"><div><p class="eyebrow">BLAIR PAGE / PRODUCT INTELLIGENCE</p><h1>Find your edge.<br><em>Build with intent.</em></h1><p>Explore competitive trade-offs and turn product strategy into a focused release plan.</p><span class="tag">Interactive strategy sandbox</span></div><svg viewBox="0 0 500 330" role="img" aria-label="Layered product strategy landscape"><defs><linearGradient id="hero" x2="1" y2="1"><stop stop-color="#d9f99d"/><stop offset="1" stop-color="#34d399"/></linearGradient><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#34574b"/></pattern></defs><rect width="500" height="330" rx="24" fill="url(#grid)"/><g stroke="url(#hero)" stroke-width="2" fill="#163b30"><path d="M60 205 250 110 440 205 250 300Z"/><path d="M60 160 250 65 440 160 250 255Z"/><path d="M60 115 250 20 440 115 250 210Z"/><path d="M250 20V210M155 67 345 162M345 67 155 162"/></g><g fill="#d9f99d"><circle cx="250" cy="115" r="7"/><circle cx="155" cy="67" r="5"/><circle cx="345" cy="162" r="5"/></g><g fill="#eef5e9" font-size="12" font-family="sans-serif"><text x="365" y="75">POSITION</text><text x="365" y="225">SCOPE</text><text x="70" y="280">DELIVERY</text></g></svg></section><div class="metrics"><article><small>SCENARIO</small><strong>Energy operations</strong></article><article><small>STRATEGIC OPTIONS</small><strong>3</strong></article><article><small>FEATURE BACKLOG</small><strong>8</strong></article></div><section id="landscape"><p class="eyebrow">01 / MARKET LANDSCAPE</p><h2>Competitive intelligence</h2><p>Scenario: a small commercial building operator wants to reduce avoidable electricity use. Compare alternative solution archetypes, not named vendor claims.</p><div class="cards"><article><h3>Utility portal</h3><p>Historical consumption and billing visibility. Investigate interval data availability and export access.</p></article><article><h3>Building automation</h3><p>Equipment monitoring and control. Investigate integration costs and operational permissions.</p></article><article><h3>Energy advisory</h3><p>Expert interpretation and improvement planning. Investigate turnaround and recurring service costs.</p></article></div><p class="muted">Research starting points: <a href="https://www.energystar.gov/buildings">ENERGY STAR Buildings</a> · <a href="https://www.energy.gov/eere/buildings/building-technologies-office">DOE Building Technologies Office</a>. These are background resources, not validation of the scenario.</p></section><section id="model"><p class="eyebrow">02 / STRATEGY SIMULATOR</p><h2>Explore positioning trade-offs</h2><p>Adjust priorities to see how illustrative option ratings respond. No market ranking is asserted.</p><div class="split"><article id="weights"></article><article id="rank" aria-live="polite"></article></div><button id="reset">Reset priorities</button></section><section id="scope"><p class="eyebrow">03 / RELEASE PLANNER</p><h2>Design a constrained release</h2><p>Select capabilities within an illustrative engineering capacity. Dependencies and safety gates remain visible.</p><label>Capacity (effort points) <input id="capacity" type="range" min="5" max="30" value="15"> <output id="cap">15</output></label><div class="meter"><div id="usage"></div></div><p id="status" aria-live="polite"></p><div id="features" class="cards"></div><button id="export">Export selected scope CSV</button></section><section id="delivery"><p class="eyebrow">04 / DELIVERY & GOVERNANCE</p><h2>From hypothesis to learning</h2><div class="cards"><article><h3>Discover</h3><p>Observe facilities staff reviewing utility bills. Test access to interval data.</p></article><article><h3>Prototype</h3><p>Replay historical data and compare alerts with a simple baseline.</p></article><article><h3>Evaluate</h3><p>Measure false alerts, investigation time and operator comprehension before expansion.</p></article></div><svg viewBox="0 0 900 160" role="img" aria-label="Read-only energy data flows through analysis and human review" class="diagram"><g fill="#173b30" stroke="#76b89b"><rect x="10" y="40" width="190" height="80" rx="14"/><rect x="240" y="40" width="190" height="80" rx="14"/><rect x="470" y="40" width="190" height="80" rx="14"/><rect x="700" y="40" width="190" height="80" rx="14"/></g><g stroke="#d9f99d" stroke-width="3" fill="none"><path d="M200 80h40l-9-6m9 6-9 6M430 80h40l-9-6m9 6-9 6M660 80h40l-9-6m9 6-9 6"/></g><g fill="#eef5e9" text-anchor="middle" font-size="17"><text x="105" y="85">Meter data</text><text x="335" y="85">Analysis</text><text x="565" y="85">Human review</text><text x="795" y="85">Action log</text></g></svg><p>Proposed safeguards: read-only access, role-based permissions, traceable recommendations and no autonomous equipment control. Actual integration and savings require testing.</p></section></main><footer>STRATAFORGE / BLAIR PAGE · Illustrative product strategy sandbox · <a href="https://blairyfairy.github.io/BlairPage/">Return to portfolio</a></footer><script src="app.js"></script>
+<!-- PORTABLE FLOATING YOUTUBE VIDEO PLAYER -->
+<script>
+(function () {
+  const VIDEO_ID = '6IDT3MpSCKI';
+  const MOBILE_BP = 900;
+
+  const PLAYER_ID = 'portable-video-player-2';
+  const BUTTON_ID = 'portable-video-button-2';
+  const FRAME_ID = 'portable-video-frame-2';
+  const STYLE_ID = 'portable-video-player-style-2';
+
+  function buildSrc(muted) {
+    return (
+      'https://www.youtube.com/embed/' + VIDEO_ID +
+      '?autoplay=1' +
+      '&mute=' + (muted ? '1' : '0') +
+      '&controls=1' +
+      '&loop=1' +
+      '&playlist=' + VIDEO_ID +
+      '&playsinline=1'
+    );
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function removeOld() {
+    document.getElementById(PLAYER_ID)?.remove();
+    document.getElementById(BUTTON_ID)?.remove();
+    document.getElementById(STYLE_ID)?.remove();
+  }
+
+  function injectStyle() {
+    const style = document.createElement('style');
+    style.id = STYLE_ID;
+    style.textContent = `
+      #${PLAYER_ID} {
+        position: fixed !important;
+        left: 20px !important;
+        bottom: 80px !important;
+        width: 260px !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        z-index: 10000 !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6) !important;
+        background: #000 !important;
+        touch-action: none !important;
+        display: none !important;
+      }
+
+      #${BUTTON_ID} {
+        position: fixed !important;
+        left: 20px !important;
+        bottom: 20px !important;
+        width: 52px !important;
+        height: 52px !important;
+        z-index: 10001 !important;
+        border-radius: 50% !important;
+        border: 1px solid rgba(240,239,244,0.35) !important;
+        background: rgba(58,62,59,0.72) !important;
+        color: #fff !important;
+        cursor: pointer !important;
+        font-size: 1.15rem !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.45) !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+      }
+
+      @media (max-width: 900px) {
+        #${PLAYER_ID} {
+          width: min(260px, calc(100vw - 40px)) !important;
+          max-width: calc(100vw - 24px) !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function create() {
+    if (document.getElementById(BUTTON_ID)) return;
+
+    removeOld();
+    injectStyle();
+
+    const player = document.createElement('div');
+    player.id = PLAYER_ID;
+
+    const button = document.createElement('button');
+    button.id = BUTTON_ID;
+    button.type = 'button';
+
+    let phase = 'closed';
+    let dragging = false;
+    let startX = 0;
+    let startY = 0;
+    let originLeft = 0;
+    let originTop = 0;
+
+    function updateButtonVisual() {
+      if (phase === 'closed') {
+        button.textContent = '▶';
+        button.setAttribute('aria-label', 'Open and play video');
+        button.setAttribute('title', 'Open and play video');
+      }
+
+      if (phase === 'muted') {
+        button.textContent = '🔊';
+        button.setAttribute('aria-label', 'Unmute video');
+        button.setAttribute('title', 'Unmute video');
+      }
+
+      if (phase === 'unmuted') {
+        button.textContent = '🔇';
+        button.setAttribute('aria-label', 'Mute video');
+        button.setAttribute('title', 'Mute video');
+      }
+
+      if (phase === 'muted-ready-close') {
+        button.textContent = '✕';
+        button.setAttribute('aria-label', 'Close video');
+        button.setAttribute('title', 'Close video');
+      }
+    }
+
+    function renderIframe(muted) {
+      player.innerHTML = `
+        <iframe
+          title="Floating YouTube video"
+          style="display:block;border:0;position:absolute;inset:0;"
+          id="${FRAME_ID}"
+          width="100%"
+          height="100%"
+          src="${buildSrc(muted)}"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+
+        <div
+          class="portable-video-drag"
+          aria-hidden="true"
+          style="
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:14px;
+            cursor:grab;
+            touch-action:none;
+            background:rgba(0,0,0,.25);
+          ">
+        </div>
+      `;
+    }
+
+    function openMuted() {
+      phase = 'muted';
+
+      player.style.setProperty('display', 'block', 'important');
+
+      if (!player.style.top || player.style.top === 'auto') {
+        player.style.setProperty('left', '20px', 'important');
+        player.style.setProperty('bottom', '78px', 'important');
+        player.style.top = 'auto';
+      }
+
+      renderIframe(true);
+      updateButtonVisual();
+
+      const rect = player.getBoundingClientRect();
+      placeButton(rect.left, rect.top);
+    }
+
+    function unmute() {
+      phase = 'unmuted';
+      player.style.setProperty('display', 'block', 'important');
+      renderIframe(false);
+      updateButtonVisual();
+    }
+
+    function muteReadyClose() {
+      phase = 'muted-ready-close';
+      player.style.setProperty('display', 'block', 'important');
+      renderIframe(true);
+      updateButtonVisual();
+    }
+
+    function closeCompletely() {
+      phase = 'closed';
+
+      player.innerHTML = '';
+      player.style.setProperty('display', 'none', 'important');
+
+      updateButtonVisual();
+
+      button.style.setProperty('left', '20px', 'important');
+      button.style.right = 'auto';
+      button.style.setProperty('bottom', '20px', 'important');
+      button.style.top = 'auto';
+    }
+
+    function placeButton(left, top) {
+      if (phase === 'closed') {
+        button.style.setProperty('left', '20px', 'important');
+        button.style.right = 'auto';
+        button.style.setProperty('bottom', '20px', 'important');
+        button.style.top = 'auto';
+        return;
+      }
+
+      const rect = player.getBoundingClientRect();
+
+      button.style.setProperty('left', left + 'px', 'important');
+      button.style.top = (top + rect.height + 8) + 'px';
+      button.style.setProperty('bottom', 'auto', 'important');
+    }
+
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (phase === 'closed') {
+        openMuted();
+        return;
+      }
+
+      if (phase === 'muted') {
+        unmute();
+        return;
+      }
+
+      if (phase === 'unmuted') {
+        muteReadyClose();
+        return;
+      }
+
+      if (phase === 'muted-ready-close') {
+        closeCompletely();
+        return;
+      }
+    });
+
+    function startDrag(x, y) {
+      if (window.innerWidth > MOBILE_BP || phase === 'closed') return;
+
+      const rect = player.getBoundingClientRect();
+
+      dragging = true;
+      startX = x;
+      startY = y;
+      originLeft = rect.left;
+      originTop = rect.top;
+    }
+
+    function moveDrag(x, y) {
+      if (!dragging) return;
+
+      const rect = player.getBoundingClientRect();
+
+      const nextLeft = clamp(
+        originLeft + (x - startX),
+        8,
+        window.innerWidth - rect.width - 8
+      );
+
+      const nextTop = clamp(
+        originTop + (y - startY),
+        8,
+        window.innerHeight - rect.height - 68
+      );
+
+      player.style.setProperty('left', nextLeft + 'px', 'important');
+      player.style.top = nextTop + 'px';
+      player.style.setProperty('bottom', 'auto', 'important');
+
+      placeButton(nextLeft, nextTop);
+    }
+
+    function endDrag() {
+      dragging = false;
+    }
+
+    player.addEventListener(
+      'touchstart',
+      e => startDrag(e.touches[0].clientX, e.touches[0].clientY),
+      { passive: true }
+    );
+
+    player.addEventListener(
+      'touchmove',
+      e => moveDrag(e.touches[0].clientX, e.touches[0].clientY),
+      { passive: true }
+    );
+
+    player.addEventListener('touchend', endDrag);
+    player.addEventListener('touchcancel', endDrag);
+
+    player.addEventListener(
+      'mousedown',
+      e => startDrag(e.clientX, e.clientY)
+    );
+
+    window.addEventListener(
+      'mousemove',
+      e => moveDrag(e.clientX, e.clientY)
+    );
+
+    window.addEventListener('mouseup', endDrag);
+
+    document.body.appendChild(player);
+    document.body.appendChild(button);
+
+    if (window.innerWidth <= MOBILE_BP) {
+      const left = 20;
+      const top = Math.max(8, window.innerHeight - 220);
+
+      player.style.setProperty('left', left + 'px', 'important');
+      player.style.top = top + 'px';
+      player.style.setProperty('bottom', 'auto', 'important');
+    }
+
+    window.addEventListener('resize', function () {
+      if (phase === 'closed') return;
+
+      const r = player.getBoundingClientRect();
+
+      const x = clamp(
+        r.left,
+        8,
+        Math.max(8, innerWidth - r.width - 8)
+      );
+
+      const y = clamp(
+        r.top,
+        8,
+        Math.max(8, innerHeight - r.height - 68)
+      );
+
+      player.style.setProperty('left', x + 'px', 'important');
+      player.style.top = y + 'px';
+      player.style.setProperty('bottom', 'auto', 'important');
+
+      placeButton(x, y);
+    });
+
+    closeCompletely();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', create);
+  } else {
+    create();
+  }
+})();
+</script>
+<!-- END PORTABLE FLOATING YOUTUBE VIDEO PLAYER -->
+</body></html>
